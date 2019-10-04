@@ -1,0 +1,12 @@
+.contacts-container {
+  /* border: 1px solid green; */
+  background-color: #3e0e40;
+  position: fixed;
+  height: 100%;
+  width: 220px;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}

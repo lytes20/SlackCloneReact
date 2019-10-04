@@ -46,42 +46,45 @@ class MessagesDisplay extends Component {
     const { message, newMessages } = this.state;
     const { inbox } = this.props;
     return (
-      <div>
+      <div className="container-messages-display">
         <div>
-          {inbox.map((message, index) => (
-            <React.Fragment key={index}>
-              <div
-                style={{
-                  maxWidth: "50%",
-                  padding: "10px",
-                  margin: "8px",
-                  display: "inline-block"
-                }}
-              >
-                <p>{message.message}</p>
-              </div>
-              <br />
-            </React.Fragment>
-          ))}
+          <div>
+            {inbox.map((message, index) => (
+              <React.Fragment key={index}>
+                <div
+                  style={{
+                    maxWidth: "50%",
+                    padding: "10px",
+                    margin: "8px",
+                    display: "inline-block"
+                  }}
+                >
+                  <p>{message.message}</p>
+                </div>
+                <br />
+              </React.Fragment>
+            ))}
+          </div>
+          <div>
+            {newMessages.map((message, index) => (
+              <React.Fragment key={index}>
+                <div
+                  style={{
+                    maxWidth: "50%",
+                    padding: "10px",
+                    margin: "8px",
+                    display: "inline-block"
+                  }}
+                >
+                  <p>{message.message}</p>
+                </div>
+                <br />
+              </React.Fragment>
+            ))}
+          </div>
         </div>
-        <div>
-          {newMessages.map((message, index) => (
-            <React.Fragment key={index}>
-              <div
-                style={{
-                  maxWidth: "50%",
-                  padding: "10px",
-                  margin: "8px",
-                  display: "inline-block"
-                }}
-              >
-                <p>{message.message}</p>
-              </div>
-              <br />
-            </React.Fragment>
-          ))}
-        </div>
-        <div>
+
+        <div className="footer">
           <input
             type="text"
             value={message}
