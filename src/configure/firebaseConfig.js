@@ -1,6 +1,6 @@
 import firebase from 'firebase/app'
 import 'firebase/firebase-firestore'
-console.log('api key-->', process.env.REACT_APP_FIREBASE_API_KEY)
+// console.log('api key-->', process.env.REACT_APP_FIREBASE_API_KEY)
 // Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,

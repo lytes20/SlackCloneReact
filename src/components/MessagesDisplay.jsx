@@ -44,10 +44,13 @@ class MessagesDisplay extends Component {
   };
   render() {
     const { message, newMessages } = this.state;
-    const { inbox } = this.props;
+    const { inbox, contact } = this.props;
     return (
       <div className="container-messages-display">
-        <div>
+        <div className="header-messages-display">
+          <h1 className="header-contact-name">{contact.name}</h1>
+        </div>
+        <div className="content-messages-display">
           <div>
             {inbox.map((message, index) => (
               <React.Fragment key={index}>
@@ -88,6 +91,7 @@ class MessagesDisplay extends Component {
           <input
             type="text"
             value={message}
+            placeholder={`Message ${contact.name}`}
             name="message"
             onChange={this.handleOnChange}
             onKeyPress={this.handleKeyPress}

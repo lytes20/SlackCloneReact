@@ -4,14 +4,32 @@
   width: 100%;
   height: 100%;
 }
+.header-messages-display {
+  border-bottom: 1px solid gray;
+}
+.content-messages-display {
+  flex: 1;
+}
+.header-contact-name{
+  padding: 10px;
+  font-size: 26px;
+  color: gray;
+}
 input {
   width: 100%;
   padding: 10px;
-  border: 1px solid salmon;
-  color: salmon;
+  border: 1px solid gray;
+  border-radius: 4px;
+  color: black;
   font-size: 16px;
 }
 
-.footer{
-    order: 2;
+input:focus{
+  outline: none;
+}
+
+.footer {
+  order: 2;
+  margin: 10px;
+  box-sizing: border-box;
 }
