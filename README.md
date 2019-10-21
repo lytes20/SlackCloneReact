@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lytes20/SlackCloneReact.svg?branch=master)](https://travis-ci.org/lytes20/SlackCloneReact)
+
 # Slack Clone
 This is project is a clone of [Slack](https://slack.com) - Slack is a cloud-based proprietary instant messaging platform developed by Slack Technologies.
 
