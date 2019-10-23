@@ -26,6 +26,14 @@ class MessagesDisplay extends Component {
   };
 
   /**
+   * Handle scrolling to the bottom of the page when a new message is entered
+   * @returns {void}
+   */
+  scrollToBottom = () => {
+    this.MessagesContainerElement.scrollTop = this.MessagesContainerElement.scrollHeight;
+  };
+
+  /**
    * Handles submitting a message
    * @returns {void}
    */
@@ -38,7 +46,9 @@ class MessagesDisplay extends Component {
         message
       };
       const newMessageArray = newMessages.concat(newMessageObject);
-      this.setState({ message: "", newMessages: newMessageArray });
+      this.setState({ message: "", newMessages: newMessageArray }, () =>
+        this.scrollToBottom()
+      );
       this.props.createMessage(newMessageObject);
     }
   };
@@ -51,7 +61,10 @@ class MessagesDisplay extends Component {
           <h1 className="header-contact-name">{contact.name}</h1>
         </div>
         <div className="content-messages-display">
-          <div>
+          <div
+            className="messages-container"
+            ref={element => (this.MessagesContainerElement = element)}
+          >
             {inbox.map((message, index) => (
               <React.Fragment key={index}>
                 <div
@@ -67,23 +80,25 @@ class MessagesDisplay extends Component {
                 <br />
               </React.Fragment>
             ))}
-          </div>
-          <div>
-            {newMessages.map((message, index) => (
-              <React.Fragment key={index}>
-                <div
-                  style={{
-                    maxWidth: "50%",
-                    padding: "10px",
-                    margin: "8px",
-                    display: "inline-block"
-                  }}
-                >
-                  <p>{message.message}</p>
-                </div>
-                <br />
-              </React.Fragment>
-            ))}
+
+            {/* New messages */}
+            <div>
+              {newMessages.map((message, index) => (
+                <React.Fragment key={index}>
+                  <div
+                    style={{
+                      maxWidth: "50%",
+                      padding: "10px",
+                      margin: "8px",
+                      display: "inline-block"
+                    }}
+                  >
+                    <p>{message.message}</p>
+                  </div>
+                  <br />
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
 
