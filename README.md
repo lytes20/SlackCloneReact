@@ -16,4 +16,4 @@ This is project is a clone of [Slack](https://slack.com) - Slack is a cloud-base
     $ yarn start
 
 ## Screenshot
- ![Preview](screenshots/slackclone_image.png)
+ ![Preview](screenshots/slackclone_image2.png)
