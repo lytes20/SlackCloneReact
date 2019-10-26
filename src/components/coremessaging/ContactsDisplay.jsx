@@ -1,6 +1,6 @@
 import React from "react";
-import "../assets/styles/contactsdisplay.css";
-import { Contacts } from "../data";
+import "../../assets/styles/contactsdisplay.css";
+import { Contacts } from "../../data";
 
 const ContactsDisplay = () => {
   return (

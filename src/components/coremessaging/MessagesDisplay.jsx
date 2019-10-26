@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { createMessage } from "../actions/messagesActions";
+import { createMessage } from "../../actions/messagesActions";
 
-import "../assets/styles/messagesdisplay.css";
+import "../../assets/styles/messagesdisplay.css";
 
 class MessagesDisplay extends Component {
   state = { message: "", newMessages: [] };

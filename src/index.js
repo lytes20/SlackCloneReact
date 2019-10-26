@@ -5,11 +5,11 @@ import dotenv from 'dotenv'
 
 import getStore from './configure/configureStore'
 import './index.css';
-import App from './App';
+import Routes from './routes';
 
 dotenv.config()
 
 const store = getStore()
 
-ReactDOM.render(<Provider store={store} ><App /></Provider>, document.getElementById('root'));
+ReactDOM.render(<Provider store={store} ><Routes /></Provider>, document.getElementById('root'));
 
