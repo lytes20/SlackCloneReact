@@ -1,16 +1,11 @@
 import React from "react";
 import "./App.css";
-import { Contacts } from "./data";
-import MessagesDisplay from "./components/MessagesDisplay";
-import ContactsDisplay from "./components/ContactsDisplay";
+import Landing from "./components/LandingPage";
 
 function App() {
   return (
     <div>
-      <ContactsDisplay />
-      <div className="content">
-        <MessagesDisplay contact={Contacts[0]} />
-      </div>
+      <Landing/>
     </div>
   );
 }
